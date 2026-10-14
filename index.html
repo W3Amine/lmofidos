@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لموفيد – وكالة التسويق الرقمي والتجارة الإلكترونية والدروبشيبينغ في المغرب</title>
+<meta name="description" content="لموفيد وكالة رقمية مغربية: تسويق رقمي، إنشاء متاجر إلكترونية، دروبشيبينغ وإعلانات فيسبوك وتيك توك وجوجل لتنمية تجارتك في المغرب. الدفع عند الاستلام.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d17; --bg2:#11142a; --card:#161a33; --line:rgba(255,255,255,.09);
+  --text:#eef0ff; --muted:#a8aecb;
+  --brand:#7c5cff; --brand2:#00d4a8; --accent:#ff6b4a;
+  --grad:linear-gradient(135deg,#7c5cff 0%,#00d4a8 100%);
+  --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.75;overflow-x:hidden}
+h1,h2,h3{line-height:1.35;font-weight:800}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:96px 0;position:relative}
+.tag{display:inline-block;padding:4px 16px;border:1px solid var(--line);border-radius:99px;font-size:.85rem;color:var(--brand2);background:rgba(0,212,168,.08);font-weight:700;margin-bottom:18px}
+.title{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:14px}
+.sub{color:var(--muted);max-width:620px;font-size:1.05rem}
+.center{text-align:center}.center .sub{margin:0 auto}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:14px;font-weight:800;border:0;cursor:pointer;font-size:1rem;font-family:inherit;transition:.25s}
+.btn-primary{background:var(--grad);color:#07121a;box-shadow:0 10px 30px -8px rgba(124,92,255,.6)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 36px -8px rgba(0,212,168,.55)}
+.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,13,23,.75);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-weight:900;font-size:1.6rem;display:flex;align-items:center;gap:10px}
+.logo i{width:36px;height:36px;border-radius:10px;background:var(--grad);display:grid;place-items:center;color:#07121a;font-style:normal;font-size:1.2rem}
+.menu{display:flex;gap:28px;align-items:center;font-size:.98rem;color:var(--muted);font-weight:600}
+.menu a:hover{color:#fff}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+
+/* HERO */
+.hero{padding:160px 0 90px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.45;z-index:0}
+.b1{width:480px;height:480px;background:#7c5cff;top:-120px;right:-120px}
+.b2{width:420px;height:420px;background:#00d4a8;top:120px;left:-140px;opacity:.3}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:22px;line-height:1.3}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:540px;margin-bottom:34px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;margin-top:40px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
+.trust b{color:var(--text)}
+.dash{background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+.dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:.85rem;color:var(--muted)}
+.dots span{display:inline-block;width:10px;height:10px;border-radius:50%;background:#ff5f57;margin-left:6px}
+.dots span:nth-child(2){background:#febc2e}.dots span:nth-child(3){background:#28c840}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.kpi{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px}
+.kpi small{color:var(--muted);font-size:.75rem}
+.kpi strong{display:block;font-size:1.25rem;font-weight:800}
+.kpi em{font-style:normal;color:var(--brand2);font-size:.78rem;font-weight:700}
+.bars{display:flex;align-items:flex-end;gap:10px;height:130px;padding:6px 0}
+.bars span{flex:1;border-radius:8px 8px 3px 3px;background:var(--grad);opacity:.9;transform-origin:bottom;animation:grow 1.4s ease both}
+@keyframes grow{from{transform:scaleY(0)}}
+.chip{position:absolute;background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:14px;font-size:.85rem;font-weight:700;box-shadow:0 14px 30px -10px #000}
+.chip.c1{right:-22px;bottom:34px}.chip.c2{left:-10px;top:-18px}
+.hero .vis{position:relative}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);background:var(--bg2);padding:16px 0;overflow:hidden;direction:ltr}
+.track{display:flex;gap:56px;width:max-content;animation:scroll 28s linear infinite;color:var(--muted);font-weight:800;font-size:1.1rem;font-family:'Cairo',sans-serif}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* SERVICES */
+.grid{display:grid;gap:22px;margin-top:50px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:rgba(124,92,255,.6)}
+.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;background:rgba(124,92,255,.15);margin-bottom:18px}
+.card h3{font-size:1.25rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.97rem}
+.card ul{list-style:none;margin-top:14px;font-size:.93rem;color:var(--muted)}
+.card li{padding:2px 0}.card li::before{content:"✓ ";color:var(--brand2);font-weight:800}
+
+/* DROPSHIPPING */
+.drop{background:var(--bg2)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.steps{display:grid;gap:16px;margin-top:28px}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);padding:18px;border-radius:16px}
+.step b.n{flex:none;width:40px;height:40px;border-radius:12px;background:var(--grad);color:#07121a;display:grid;place-items:center;font-weight:900}
+.step h4{font-size:1.05rem;margin-bottom:2px}.step p{color:var(--muted);font-size:.92rem}
+.box{background:linear-gradient(160deg,#1b1f40,#12152e);border:1px solid var(--line);border-radius:26px;padding:34px}
+.box h3{font-size:1.5rem;margin-bottom:18px}
+.perk{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.perk:last-child{border:0}.perk span{font-size:1.5rem}
+.perk p{color:var(--muted);font-size:.92rem}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{text-align:center;padding:30px 10px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.stat strong{font-size:2.6rem;font-weight:900;display:block;direction:ltr}
+.stat span{color:var(--muted);font-size:.92rem}
+
+/* PRICING */
+.price{display:flex;flex-direction:column}
+.price.pop{border-color:var(--brand);background:linear-gradient(170deg,#211f52,var(--card))}
+.badge{position:absolute;top:18px;left:18px;background:var(--accent);font-size:.75rem;font-weight:800;padding:2px 12px;border-radius:99px}
+.price .amt{font-size:2rem;font-weight:900;margin:12px 0 4px}
+.price ul{flex:1;margin-bottom:24px}
+.note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:22px}
+
+/* FAQ */
+.faq{max-width:780px;margin:44px auto 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 24px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--brand2);font-size:1.4rem;line-height:1.4}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted);font-size:.97rem}
+
+/* CONTACT */
+.contact{background:var(--bg2)}
+.cbox{display:grid;grid-template-columns:1fr 1fr;gap:50px;background:linear-gradient(135deg,#1c1850,#0e2a2f);border:1px solid var(--line);border-radius:30px;padding:54px}
+.cinfo p{color:var(--muted);margin:14px 0 24px}
+.cinfo a.line{display:flex;gap:12px;align-items:center;margin-bottom:12px;font-weight:700}
+.cinfo a.line bdi{direction:ltr}
+form{display:grid;gap:14px}
+input,select,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:#fff;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--brand2)}
+select option{color:#000}
+.ok{display:none;color:var(--brand2);font-weight:700;text-align:center}
+
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.wa{position:fixed;left:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:1.9rem;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}100%{box-shadow:0 0 0 22px rgba(37,211,102,0)}}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .wrap,.split,.cbox{grid-template-columns:1fr}
+  .g3{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .menu{position:fixed;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);display:none}
+  .menu.open{display:flex}
+  .burger{display:block}
+  .cbox{padding:30px 22px}
+  section{padding:70px 0}
+  .chip{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo"><i>ل</i> لموفيد</a>
+    <div class="menu" id="menu">
+      <a href="#services">خدماتنا</a>
+      <a href="#dropshipping">الدروبشيبينغ</a>
+      <a href="#offres">العروض</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#contact" class="btn btn-primary" style="padding:8px 20px">طلب عرض سعر مجاني</a>
+    </div>
+    <button class="burger" aria-label="القائمة" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div>
+      <span class="tag">🇲🇦 وكالة رقمية مغربية 100%</span>
+      <h1>حوّل زوّارك إلى <span class="grad">زبناء</span> وفكرتك إلى متجر مربح في المغرب.</h1>
+      <p class="lead">لموفيد ترافقك في التسويق الرقمي، التجارة الإلكترونية والدروبشيبينغ بالمغرب: موقع، إعلانات، محتوى، توصيل ودفع عند الاستلام. كل شيء في مكان واحد.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">احصل على تدقيق مجاني ←</a>
+        <a href="https://wa.me/212600000000" class="btn btn-ghost" target="_blank" rel="noopener">💬 تواصل معنا عبر واتساب</a>
+      </div>
+      <div class="trust">
+        <span>✔ <b>الدفع عند الاستلام</b></span>
+        <span>✔ إعلانات <b>فيسبوك · تيك توك · جوجل</b></span>
+        <span>✔ فريق <b>مغربي</b> يفهم السوق</span>
+      </div>
+    </div>
+    <div class="vis">
+      <div class="chip c2">📈 عائد الإعلانات ×4.2</div>
+      <div class="dash">
+        <div class="dots dash-top"><div><span></span><span></span><span></span></div><div>لوحة التحكم · مثال توضيحي</div></div>
+        <div class="kpis">
+          <div class="kpi"><small>الطلبيات</small><strong>1 284</strong><em>▲ 38%</em></div>
+          <div class="kpi"><small>رقم المعاملات</small><strong>212K درهم</strong><em>▲ 54%</em></div>
+          <div class="kpi"><small>نسبة التحويل</small><strong>3.8%</strong><em>▲ 1.2</em></div>
+        </div>
+        <div class="bars">
+          <span style="height:30%"></span><span style="height:42%"></span><span style="height:38%"></span><span style="height:58%"></span><span style="height:52%"></span><span style="height:74%"></span><span style="height:68%"></span><span style="height:92%"></span>
+        </div>
+      </div>
+      <div class="chip c1">🚚 توصيل 24-48 ساعة لمختلف مدن المغرب</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track">
+  <span>Facebook Ads</span><span>Instagram</span><span>TikTok Ads</span><span>Google Ads</span><span>Shopify</span><span>WooCommerce</span><span>YouCan</span><span>SEO</span><span>WhatsApp Business</span>
+  <span>Facebook Ads</span><span>Instagram</span><span>TikTok Ads</span><span>Google Ads</span><span>Shopify</span><span>WooCommerce</span><span>YouCan</span><span>SEO</span><span>WhatsApp Business</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="tag">خدماتنا</span>
+      <h2 class="title">كل ما تحتاجه لـ<span class="grad">البيع أونلاين</span></h2>
+      <p class="sub">وكالة متكاملة تركّز على النتائج، موجهة للعلامات التجارية والمقاولين الشباب بالمغرب.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card reveal"><div class="ic">🎯</div><h3>الإعلانات الرقمية</h3><p>حملات فعّالة تستهدف الزبون المناسب في الوقت المناسب.</p><ul><li>إعلانات فيسبوك وإنستغرام</li><li>إعلانات تيك توك</li><li>إعلانات جوجل ويوتيوب</li></ul></div>
+      <div class="card reveal"><div class="ic">🛒</div><h3>إنشاء متاجر إلكترونية</h3><p>متاجر سريعة وجميلة ومهيأة للتحويل على الهاتف.</p><ul><li>Shopify / WooCommerce / YouCan</li><li>الدفع عند الاستلام</li><li>الربط مع شركات التوصيل</li></ul></div>
+      <div class="card reveal"><div class="ic">📦</div><h3>الدروبشيبينغ</h3><p>انطلق بدون مخزون: منتجات رابحة، موردون موثوقون وتوصيل مُدار.</p><ul><li>البحث عن المنتجات الرابحة</li><li>اختيار الموردين</li><li>تدبير الطلبيات</li></ul></div>
+      <div class="card reveal"><div class="ic">🎬</div><h3>المحتوى والإبداع</h3><p>فيديوهات UGC وصور منتجات وتصاميم توقف التصفح.</p><ul><li>فيديوهات Reels / TikTok</li><li>تصوير ومونتاج</li><li>سيناريوهات إعلانية</li></ul></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>السيو وتحسين الظهور</h3><p>كن حاضراً في جوجل عندما يبحث زبناؤك عن منتجاتك.</p><ul><li>تدقيق تقني</li><li>محتوى محسّن</li><li>Google My Business</li></ul></div>
+      <div class="card reveal"><div class="ic">🎨</div><h3>الهوية البصرية والسوشيال ميديا</h3><p>هوية قوية ومجتمع متفاعل حول علامتك التجارية.</p><ul><li>الشعار والهوية البصرية</li><li>تسيير صفحات التواصل</li><li>إدارة المجتمع</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="dropshipping" class="drop">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="tag">التجارة الإلكترونية والدروبشيبينغ</span>
+      <h2 class="title">أطلق تجارتك <span class="grad">بدون مخزون وبدون قلق</span></h2>
+      <p class="sub">نبني معك منظومة بيع كاملة، من المنتج إلى وصوله لباب الزبون.</p>
+      <div class="steps">
+        <div class="step"><b class="n">1</b><div><h4>المنتج والسوق</h4><p>دراسة السوق المغربي واختيار منتجات ذات إمكانات عالية.</p></div></div>
+        <div class="step"><b class="n">2</b><div><h4>المتجر والعرض</h4><p>موقع محسّن، صفحات منتجات مقنعة وعروض مع مسار الدفع عند الاستلام.</p></div></div>
+        <div class="step"><b class="n">3</b><div><h4>الإعلانات والمبيعات</h4><p>حملات تُختبر وتُوسَّع وتُتابع بأرقام واضحة.</p></div></div>
+        <div class="step"><b class="n">4</b><div><h4>التأكيد والتوصيل</h4><p>تأكيد الطلبيات، الشحن والمتابعة حتى استلام المبلغ.</p></div></div>
+      </div>
+    </div>
+    <div class="box reveal">
+      <h3>لماذا لموفيد؟</h3>
+      <div class="perk"><span>💵</span><div><b>مصمَّم للدفع عند الاستلام</b><p>نموذج مناسب لعادات الشراء عند المغاربة.</p></div></div>
+      <div class="perk"><span>📊</span><div><b>قرارات مبنية على الأرقام</b><p>بيكسل، تتبع وتقارير شفافة.</p></div></div>
+      <div class="perk"><span>⚡</span><div><b>انطلاقة سريعة</b><p>متجرك جاهز للبيع في ظرف أيام قليلة.</p></div></div>
+      <div class="perk"><span>🤝</span><div><b>مرافقة بشرية</b><p>مخاطب خاص بك، بالدارجة أو العربية أو الفرنسية.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><strong class="grad" data-n="24" data-s=" س">0</strong><span>متوسط مدة الرد</span></div>
+      <div class="stat"><strong class="grad" data-n="12" data-s="+">0</strong><span>مدينة نوصل إليها</span></div>
+      <div class="stat"><strong class="grad" data-n="100" data-s="%">0</strong><span>شفافية في النتائج</span></div>
+      <div class="stat"><strong class="grad" data-n="7" data-s="/7">0</strong><span>دعم عبر واتساب</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="offres" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="tag">عروضنا</span>
+      <h2 class="title">اختر <span class="grad">باقتك</span></h2>
+      <p class="sub">باقات واضحة للانطلاق أو للتسريع. عرض سعر مخصص عند الطلب.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card price reveal"><h3>Start – البداية</h3><p>لإطلاق حضورك على الإنترنت.</p><div class="amt">حسب الطلب</div>
+        <ul><li>متجر إلكتروني جاهز</li><li>بيكسل وتتبع</li><li>حملة تجريبية واحدة</li><li>دعم عبر واتساب</li></ul>
+        <a href="#contact" class="btn btn-ghost">اطلب عرض سعر</a></div>
+      <div class="card price pop reveal"><span class="badge">الأكثر طلباً</span><h3>Growth – النمو</h3><p>لتوسيع مبيعاتك الشهرية.</p><div class="amt">حسب الطلب</div>
+        <ul><li>كل ما في باقة Start</li><li>تسيير إعلانات ميتا وتيك توك</li><li>فيديوهات إبداعية شهرية</li><li>تقرير أسبوعي</li></ul>
+        <a href="#contact" class="btn btn-primary">اطلب عرض سعر</a></div>
+      <div class="card price reveal"><h3>Premium – المتميزة</h3><p>فريق تسويق كامل في خدمتك.</p><div class="amt">حسب الطلب</div>
+        <ul><li>كل ما في باقة Growth</li><li>السيو وإعلانات جوجل</li><li>الهوية البصرية والسوشيال ميديا</li><li>استراتيجية ومستشار خاص</li></ul>
+        <a href="#contact" class="btn btn-ghost">اطلب عرض سعر</a></div>
+    </div>
+    <p class="note">ميزانية الإعلانات تُدفع مباشرة للمنصات وغير مشمولة في الباقات.</p>
+  </div>
+</section>
+
+<section id="faq" class="drop">
+  <div class="wrap">
+    <div class="center reveal"><span class="tag">الأسئلة الشائعة</span><h2 class="title">أسئلة يطرحها الزبناء</h2></div>
+    <div class="faq reveal">
+      <details><summary>هل أحتاج إلى مخزون للقيام بالدروبشيبينغ؟</summary><p>لا. المورد يرسل المنتج مباشرة إلى الزبون. نساعدك على اختيار موردين موثوقين وتنظيم اللوجستيك.</p></details>
+      <details><summary>هل تشتغلون بنظام الدفع عند الاستلام؟</summary><p>نعم، متاجرنا ومسارات البيع لدينا مصممة للدفع عند الاستلام مع تأكيد الطلبيات لتقليل المرتجعات.</p></details>
+      <details><summary>كم يستغرق إطلاق متجري؟</summary><p>عموماً بين 3 و10 أيام حسب تعقيد المشروع وسرعة الموافقات.</p></details>
+      <details><summary>ما هي ميزانية الإعلانات التي يجب تخصيصها؟</summary><p>تختلف حسب المنتج والأهداف. نحدد معك ميزانية اختبار معقولة قبل التوسع.</p></details>
+      <details><summary>هل يمكنكم تسيير إعلاناتي فقط؟</summary><p>بالطبع. يمكنك اختيار خدمة واحدة: الإعلانات، إنشاء الموقع، المحتوى أو السيو.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="cbox reveal">
+      <div class="cinfo">
+        <span class="tag">لنبدأ معاً</span>
+        <h2 class="title"><span class="grad">تدقيق مجاني</span> لمشروعك خلال 24 ساعة</h2>
+        <p>حدثنا عن مشروعك. نحلل وضعك ونقترح عليك خطة عمل ملموسة، بدون أي التزام.</p>
+        <a class="line" href="https://wa.me/212600000000" target="_blank" rel="noopener">💬 <bdi>+212 6 00 00 00 00</bdi></a>
+        <a class="line" href="mailto:contact@lmofid.com">✉️ <bdi>contact@lmofid.com</bdi></a>
+        <a class="line" href="https://lmofid.com">🌐 <bdi>lmofid.com</bdi></a>
+      </div>
+      <form id="form">
+        <input name="nom" placeholder="الاسم الكامل" required>
+        <input name="tel" type="tel" placeholder="رقم الهاتف / واتساب" required>
+        <select name="service" required>
+          <option value="">الخدمة المطلوبة</option>
+          <option>الإعلانات الرقمية</option><option>إنشاء متجر إلكتروني</option>
+          <option>الدروبشيبينغ</option><option>المحتوى والفيديو</option><option>السيو</option><option>أخرى</option>
+        </select>
+        <textarea name="msg" rows="4" placeholder="حدثنا عن مشروعك"></textarea>
+        <button class="btn btn-primary" type="submit">إرسال عبر واتساب ←</button>
+        <p class="ok" id="ok">شكراً! جارٍ تحويلك إلى واتساب…</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="y"></span> لموفيد – وكالة التسويق الرقمي والتجارة الإلكترونية والدروبشيبينغ بالمغرب.</div>
+    <div>الدار البيضاء · المغرب 🇲🇦</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/212600000000" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-n]').forEach(c=>{
+    const t=+c.dataset.n,s=c.dataset.s;let i=0;
+    const id=setInterval(()=>{i+=Math.max(1,Math.ceil(t/40));if(i>=t){i=t;clearInterval(id)}c.textContent=i+s},30);
+  });
+  io.unobserve(e.target);
+}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// النموذج -> واتساب (غيّر الرقم برقمكم الحقيقي)
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const text=encodeURIComponent(`مرحباً لموفيد،\nالاسم: ${f.get('nom')}\nالهاتف: ${f.get('tel')}\nالخدمة: ${f.get('service')}\nالمشروع: ${f.get('msg')||'-'}`);
+  document.getElementById('ok').style.display='block';
+  setTimeout(()=>window.open('https://wa.me/212600000000?text='+text,'_blank'),600);
+});
+</script>
+</body>
+</html>
